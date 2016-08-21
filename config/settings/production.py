@@ -15,10 +15,14 @@ Production Configurations
 """
 from __future__ import absolute_import, unicode_literals
 
+import logging
+
 from boto.s3.connection import OrdinaryCallingFormat
+#  See:http://stackoverflow.com/questions/10390244/
+from storages.backends.s3boto import S3BotoStorage
 from django.utils import six
 
-import logging
+
 
 
 from .common import *  # noqa
@@ -110,8 +114,6 @@ AWS_HEADERS = {
 # URL that handles the media served from MEDIA_ROOT, used for managing
 # stored files.
 
-#  See:http://stackoverflow.com/questions/10390244/
-from storages.backends.s3boto import S3BotoStorage
 StaticRootS3BotoStorage = lambda: S3BotoStorage(location='static')
 MediaRootS3BotoStorage = lambda: S3BotoStorage(location='media')
 DEFAULT_FILE_STORAGE = 'config.settings.production.MediaRootS3BotoStorage'

@@ -7,10 +7,10 @@ Local settings
 - Add Django Debug Toolbar
 - Add django-extensions as app
 """
-
-from .common import *  # noqa
-import socket
 import os
+import socket
+from .common import *  # noqa
+
 
 # DEBUG
 # ------------------------------------------------------------------------------

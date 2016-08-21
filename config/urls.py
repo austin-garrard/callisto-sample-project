@@ -1,21 +1,20 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.conf import settings
-from django.conf.urls import include, url
-from django.conf.urls.static import static
-from django.contrib import admin
-from django.views.generic import TemplateView
-from django.views import defaults as default_views
-
 from callisto.delivery.views import (
     delete_report, edit_record_form_view, export_as_pdf, new_record_form_view,
     submit_to_matching, submit_to_school, withdraw_from_matching,
 )
-
 from callisto_sample_project.core.forms import (
     CustomMatchReport, CustomReport, EncryptedFormWizard,
 )
+
+from django.conf import settings
+from django.conf.urls import include, url
+from django.conf.urls.static import static
+from django.contrib import admin
+from django.views import defaults as default_views
+from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
