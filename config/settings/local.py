@@ -9,7 +9,7 @@ Local settings
 """
 import os
 import socket
-from .common import *  # noqa
+from .common import *  # flake8: noqa
 
 
 # DEBUG

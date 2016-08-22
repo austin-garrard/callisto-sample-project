@@ -25,7 +25,7 @@ from django.utils import six
 
 
 
-from .common import *  # noqa
+from .common import *  # flake8: noqa
 
 # SECRET CONFIGURATION
 # ------------------------------------------------------------------------------

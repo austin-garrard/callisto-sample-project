@@ -12,7 +12,8 @@ from __future__ import absolute_import, unicode_literals
 
 import environ
 
-ROOT_DIR = environ.Path(__file__) - 3  # (callisto-sample-project/config/settings/common.py - 3 = callisto-sample-project/)
+# (callisto-sample-project/config/settings/common.py - 3 = callisto-sample-project/)
+ROOT_DIR = environ.Path(__file__) - 3
 APPS_DIR = ROOT_DIR.path('callisto_sample_project')
 
 env = environ.Env()
@@ -99,7 +100,7 @@ ADMINS = (
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
 
-# This is where reports from users will be sent. This is not the technical admin address. 
+# This is where reports from users will be sent. This is not the technical admin address.
 # If this is not changed, no one will receive incident reports.
 COORDINATOR_EMAIL = 'coordinator@example.com'
 
